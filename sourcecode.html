@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <style>
+
+    body {
+
+      height: 100vh;
+
+      display: flex;
+
+    }
+
+      #button {
+
+      margin: auto;
+
+      background: none;
+
+      color: purple;
+
+      outline: none;
+
+      border: 3px solid purple;
+
+      border-radius: 2px;
+
+      transition: all .2s ease-in;
+
+      }
+
+      #button:active {
+
+        transform: scale(.9);
+
+      }
+
+    </style>
+
+</head>
+
+<body>
+
+  
+
+  <button type="button" id="button">Change Background</button>
+
+  
+
+  <script>
+
+    
+
+    const button = document.getElementById('button');
+
+    button.addEventListener('click', () => {
+
+      const r = Math.round(Math.random() * 255 + 1);
+
+      const g = Math.round(Math.random() * 255 + 1);
+
+      const b = Math.round(Math.random() * 255 + 1);
+
+      document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+    });
+
+    
+
+  </script>
+
+</body>
+
+</html>
